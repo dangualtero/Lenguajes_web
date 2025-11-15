@@ -1,0 +1,137 @@
+/* MenuHeader Component Styles */
+.menu-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 1rem;
+}
+
+.menu-title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.menu-logo {
+  font-size: 3rem;
+}
+
+.menu-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color, #d88c8c);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.menu-subtitle {
+  font-size: 1.2rem;
+  color: #b07b7b;
+  margin: 0.5rem 0 0 0;
+}
+
+/* 🔍 Barra de búsqueda - MUY PEQUEÑA */
+.search-bar {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--border-light, #f3c2c2);
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  border-color: var(--accent-color, #d88c8c);
+  box-shadow: 0 4px 15px rgba(216, 140, 140, 0.15);
+  transform: translateY(-1px);
+}
+
+.search-icon {
+  font-size: 1rem;
+  color: var(--accent-color, #d88c8c);
+  flex-shrink: 0;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  flex: 1;
+  font-size: 0.85rem;
+  outline: none;
+  color: var(--text-color, #9b5f5f);
+  font-family: "Poppins", sans-serif;
+}
+
+.search-input::placeholder {
+  color: #d4a5a5;
+  opacity: 0.7;
+}
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+  .menu-title {
+    font-size: 2.5rem;
+  }
+
+  .menu-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .search-bar {
+    max-width: 260px;
+  }
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+  .menu-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .menu-title {
+    font-size: 2rem;
+  }
+
+  .menu-logo {
+    font-size: 2rem;
+  }
+
+  .menu-subtitle {
+    font-size: 1rem;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-title {
+    font-size: 1.8rem;
+  }
+
+  .menu-logo {
+    font-size: 1.8rem;
+  }
+
+  .menu-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .search-bar {
+    padding: 0.5rem 0.9rem;
+    max-width: 250px;
+  }
+
+  .search-input {
+    font-size: 0.8rem;
+  }
+}

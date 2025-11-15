@@ -1,0 +1,229 @@
+/* 🛒 Panel del carrito - Fijo al lado derecho */
+.cart-panel {
+  position: fixed !important;
+  top: 20px !important;
+  right: 2rem !important;
+  width: 380px !important;
+  max-height: calc(100vh - 150px) !important;
+  background-color: #fff !important;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  display: flex !important;
+  flex-direction: column;
+  z-index: 9999 !important;
+  overflow: hidden;
+}
+
+/* Header del carrito */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f3c2c2;
+}
+
+.cart-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d88c8c;
+  margin: 0;
+}
+
+.cart-count {
+  background-color: #d88c8c;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Lista de items del carrito */
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Scrollbar personalizado */
+.cart-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+  background: #f9dede;
+  border-radius: 10px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+  background: #d88c8c;
+  border-radius: 10px;
+}
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+  background: #c27070;
+}
+
+/* Item individual del carrito */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fff5f0;
+  border-radius: 1rem;
+  margin-bottom: 0.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateX(-3px);
+  box-shadow: 0 4px 12px rgba(216, 140, 140, 0.2);
+}
+
+.cart-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 2px solid #f3c2c2;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #9b5f5f;
+  margin: 0 0 0.3rem 0;
+}
+
+.cart-item-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d88c8c;
+  margin: 0;
+}
+
+/* Botón de remover */
+.remove-button {
+  background-color: transparent;
+  border: none;
+  color: #d88c8c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #ffe6e6;
+  color: #c27070;
+  transform: rotate(90deg);
+}
+
+/* Footer del carrito */
+.cart-footer {
+  border-top: 2px solid #f3c2c2;
+  padding-top: 1rem;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background-color: #fff5f0;
+  border-radius: 0.8rem;
+}
+
+.cart-total-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #9b5f5f;
+}
+
+.cart-total-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d88c8c;
+}
+
+/* Botón de ordenar */
+.order-button {
+  width: 100%;
+  background: linear-gradient(135deg, #d88c8c 0%, #c27070 100%);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(216, 140, 140, 0.3);
+}
+
+.order-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(216, 140, 140, 0.4);
+}
+
+.order-button:active {
+  transform: translateY(0);
+}
+
+/* 📱 Responsive - Tablet */
+@media (max-width: 1024px) {
+  .cart-panel {
+    width: 320px !important;
+    right: 1rem !important;
+  }
+}
+
+/* 📱 Responsive - Mobile */
+@media (max-width: 768px) {
+  .cart-panel {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: 60vh !important;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 1rem;
+  }
+
+  .cart-item-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cart-item-name {
+    font-size: 0.9rem;
+  }
+
+  .cart-item-price {
+    font-size: 1rem;
+  }
+}
+
+/* Ajustar el grid del menú cuando hay carrito */
+@media (min-width: 769px) {
+  .menu-grid.with-cart {
+    margin-right: 420px;
+  }
+}

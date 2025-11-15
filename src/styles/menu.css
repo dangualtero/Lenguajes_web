@@ -1,0 +1,248 @@
+/* 🎨 Paleta base */
+:root {
+  --bg-color: #fde6d5;
+  --accent-color: #d88c8c;
+  --text-color: #9b5f5f;
+  --white: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* 🌸 Fondo general y tipografía */
+body {
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  transition: margin-right 0.4s ease-in-out;
+}
+
+/* Encabezado del menú */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.menu-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.menu-header p {
+  font-size: 1.2rem;
+  color: #b07b7b;
+}
+
+/* Botón del carrito */
+.cart-btn {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #c27070;
+}
+
+/* 🔍 Barra de búsqueda */
+.search-bar {
+  width: 80%;
+  max-width: 700px;
+  margin: 1rem auto 2rem;
+  padding: 0.9rem 1.2rem;
+  border: 2px solid #f3c2c2;
+  border-radius: 2rem;
+  background-color: #f9dede;
+  box-shadow: 0 4px 10px var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  color: var(--text-color);
+}
+
+/* 🍴 Filtros */
+.category-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-filter button {
+  border: 2px solid #f3c2c2;
+  background-color: #ffe6e6;
+  padding: 0.6rem 1.4rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.category-filter button.active,
+.category-filter button:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* 🧁 Grid del menú */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta de producto */
+.menu-item {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 15px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-item-content {
+  padding: 1rem;
+}
+
+.menu-item-content h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--accent-color);
+}
+
+.menu-item-content p {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Botón agregar */
+.add-btn {
+  margin-top: 0.8rem;
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #c27070;
+}
+
+/* 🛒 Panel del carrito */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background-color: var(--white);
+  box-shadow: -3px 0 15px var(--shadow);
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.cart-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f3c2c2;
+  padding-bottom: 0.6rem;
+}
+
+.cart-item p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.cart-footer {
+  margin-top: auto;
+}
+
+.checkout-btn {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #c27070;
+}
+
+/* 💫 Animaciones */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
