@@ -7,6 +7,12 @@ import MenuItem from './components/MenuItem';
 import SelectedItems from './components/SelectedItems';
 import './styles/menu.css';
 import brunchBg from './img/fondo2.png'; 
+import hamburguesaImg from './img/hamburguesa.jpg';
+import pizzaImg from './img/pizza.jpg';
+import ensaladaImg from './img/ensalada.jpg';
+import jugoImg from'./img/jugo.jpg';
+import brownieImg from'./img/brownie.jpg';
+
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,9 +22,9 @@ const App = () => {
   const menuItems = [
     { 
       id: 1, 
-      name: 'Pizza Margarita', 
+      name: 'Pizza', 
       price: 25000, 
-      image: 'https://via.placeholder.com/400x300/FF6B6B/ffffff?text=Pizza+Margarita',
+      image: pizzaImg,
       category: 'Comidas',
       description: 'Deliciosa pizza con salsa de tomate y mozzarella fresca',
       tags: ['italiana', 'queso'],
@@ -28,7 +34,7 @@ const App = () => {
       id: 2, 
       name: 'Hamburguesa', 
       price: 18000, 
-      image: 'https://via.placeholder.com/400x300/4ECDC4/ffffff?text=Hamburguesa',
+      image: hamburguesaImg,
       category: 'Comidas',
       description: 'Hamburguesa jugosa con papas fritas y salsas',
       tags: ['carne', 'clásico']
@@ -37,7 +43,7 @@ const App = () => {
       id: 3, 
       name: 'Ensalada César', 
       price: 15000, 
-      image: 'https://via.placeholder.com/400x300/95E1D3/ffffff?text=Ensalada',
+      image: ensaladaImg,
       category: 'Comidas',
       description: 'Fresca ensalada con pollo grillado y aderezo césar',
       tags: ['saludable', 'fresco'],
@@ -47,16 +53,16 @@ const App = () => {
       id: 4, 
       name: 'Jugo Natural', 
       price: 8000, 
-      image: 'https://via.placeholder.com/400x300/F38181/ffffff?text=Jugo',
+      image: jugoImg,
       category: 'Bebidas',
-      description: 'Jugo 100% natural de frutas de temporada',
+      description: 'Jugo 100% natural de frutas frescas',
       tags: ['natural', 'vitaminas']
     },
     { 
       id: 5, 
       name: 'Brownie', 
       price: 12000, 
-      image: 'https://via.placeholder.com/400x300/AA96DA/ffffff?text=Brownie',
+      image: brownieImg,
       category: 'Postres',
       description: 'Brownie de chocolate con helado de vainilla',
       tags: ['chocolate', 'dulce'],
@@ -153,7 +159,7 @@ const App = () => {
                   color: '#CF948E',
                   fontSize: '1.5rem'
                 }}>
-                  No se encontraron platillos 😔
+                  No se encontraron platillos que coincidan con tu búsqueda.
                 </div>
               )}
             </div>

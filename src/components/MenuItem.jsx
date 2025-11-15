@@ -18,7 +18,7 @@ const MenuItem = ({ item, onSelect, isSelected }) => {
         
         {item.popular && (
           <div className="popular-badge">
-            <span>⭐</span>
+          
             <span>Popular</span>
           </div>
         )}
