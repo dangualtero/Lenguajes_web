@@ -44,8 +44,8 @@
 
 .popular-badge {
   left: 0.8rem;
-  background-color: #fbbf24;
-  color: var(--white, #fff);
+  background-color: #FDF6A3;
+  color: #9b5f5f;
 }
 
 .selected-heart {

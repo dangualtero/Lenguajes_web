@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+  import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import MenuHeader from './components/MenuHeader';
@@ -12,6 +12,20 @@ import pizzaImg from './img/pizza.jpg';
 import ensaladaImg from './img/ensalada.jpg';
 import jugoImg from'./img/jugo.jpg';
 import brownieImg from'./img/brownie.jpg';
+import panquequesImg from'./img/panqueques.jpg';
+import tostadasImg from'./img/tostadas.jpg';
+import arepasImg from'./img/arepas.jpg';
+import cheesecakeImg from'./img/cheescake.jpg';
+import huevosImg from'./img/huevos.jpg';
+import sandwichImg from'./img/sandwich.jpg';
+import miloImg from'./img/milo.jpg';
+import capuccinoImg from'./img/capuccino.jpg';
+import detoxImg from'./img/detox.jpg';
+import redvelvetImg from'./img/redvelvet.jpg';
+import aguaImg from'./img/agua.jpg';
+import latteImg from'./img/latte.jpg';
+import chocolateImg from'./img/chocolate.jpg';
+
 
 
 const App = () => {
@@ -68,6 +82,136 @@ const App = () => {
       tags: ['chocolate', 'dulce'],
       popular: true
     },
+     { 
+      id: 6, 
+      name: 'Panqueques', 
+      price: 14000, 
+      image: panquequesImg,
+      category: 'Comidas',
+      description: 'Panqueques esponjosos con miel de maple y frutas frescas',
+      tags: ['esponjosos', 'dulce'],
+      popular: true
+    },
+    { 
+      id: 7, 
+      name: 'Tostadas Francesas', 
+      price: 16000, 
+      image: tostadasImg,
+      category: 'Comidas',
+      description: 'tostadas francesas con sirope y frutas frescas',
+      tags: ['esponjosos', 'dulce'],
+      popular: false
+    },
+    { 
+      id: 8, 
+      name: 'Trilogia de arepas rellenas', 
+      price: 20000, 
+      image: arepasImg,
+      category: 'Comidas',
+      description: 'tres arepas rellenas con diferentes ingredientes (carne, pollo, mixta)',
+      tags: ['3', 'rico'],
+      popular: false
+    },
+     { 
+      id: 9, 
+      name: 'Capuccino', 
+      price: 10000, 
+      image: capuccinoImg,
+      category: 'Bebidas',
+      description: 'Café espresso con leche espumada, cremoso y equilibrado',
+      tags: ['café', 'leche'],
+      popular: false
+    }, { 
+      id: 10, 
+      name: 'Latte', 
+      price: 12000, 
+      image: latteImg,
+      category: 'Bebidas',
+      description: 'Espresso suave con abundante leche caliente y un toque de espuma',
+      tags: ['café', 'rico'],
+      popular: true
+    },
+    { 
+      id: 11, 
+      name: 'Sandwich de Pollo', 
+      price: 29000, 
+      image: sandwichImg,
+      category: 'Comidas',
+      description: 'Sandwich de pechuga de pollo, en pan masa madre, salsa pesto, tomate, queso, rujula y papas rusticas',
+      tags: ['saludable', 'rico'],
+      popular: false
+    },
+     { 
+      id: 12, 
+      name: 'Huevos Napolitanos', 
+      price: 23000, 
+      image: huevosImg  ,
+      category: 'Comidas',
+      description: 'Huevos en cacerola con salsa naopolitana, aguacate, queso',
+      tags: ['saludable', 'rico'],
+      popular: true
+    },
+      { 
+      id: 13, 
+      name: 'Cheesecake de frutos rojos', 
+      price: 12000, 
+      image: cheesecakeImg,
+      category: 'Postres',
+      description: 'Cheesecake con frutos rojos y galleta',
+      tags: ['frutos rojos', 'rico'],
+      popular: false
+    },
+     { 
+      id: 14, 
+      name: 'Esfera de chocolate con helado', 
+      price: 18500, 
+      image: chocolateImg,
+      category: 'Postres',
+      description: 'Esfera de chocolate elaborada con chocolate 75% cacao, helado, frutos amarillos y frutos rojos',
+      tags: ['postre' ],
+      popular: true
+    },
+    { 
+      id: 15, 
+      name: 'Smoothie detox', 
+      price: 15000, 
+      image: detoxImg,
+      category: 'Bebidas',
+      description: 'Elaborado con piña, aguacate, espinaca, pepino y apio',
+      tags: ['saludable', 'frio'],
+      popular: false
+    },
+    { 
+      id: 16, 
+      name: 'Torta red velvet', 
+      price: 14000, 
+      image: redvelvetImg,
+      category: 'Postres',
+      description: 'torta personal red velvet con queso crema y frutos rojos',
+      tags: ['postre', 'torta'],
+      popular: true
+    },
+    { 
+      id: 17, 
+      name: 'Milo Frio', 
+      price: 14500, 
+      image: miloImg,
+      category: 'Bebidas',
+      description: 'Bebida fría con chocolate milo, con leche deslactosada y borde de ganache de chocolate',
+      tags: ['delicioso', 'frio'],
+      popular: false
+    },
+    { 
+      id: 18, 
+      name: 'Agua sin gas', 
+      price: 6500, 
+      image: aguaImg,
+      category: 'Bebidas',
+      description: 'Botella de agua sin gas 500ml',
+      tags: ['saludable', 'rico'],
+      popular: false
+    },
+
   ];
 
   const categories = ['Todos', 'Comidas', 'Bebidas', 'Postres'];
