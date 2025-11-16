@@ -1,4 +1,4 @@
-  import React, { useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import MenuHeader from './components/MenuHeader';
@@ -217,26 +217,44 @@ const App = () => {
   const categories = ['Todos', 'Comidas', 'Bebidas', 'Postres'];
 
   const filteredItems = menuItems.filter(item => {
-    const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const searchLower = searchTerm.toLowerCase().trim();
+    const itemNameLower = item.name.toLowerCase();
+    
+ 
+    const matchesSearch = searchLower === '' || 
+                         itemNameLower.includes(searchLower) ||
+                         itemNameLower.split(' ').some(word => word.startsWith(searchLower));
+    
     const matchesCategory = activeCategory === 'Todos' || item.category === activeCategory;
     return matchesSearch && matchesCategory;
   });
 
   const handleSelectItem = (item) => {
-    const isSelected = selectedItems.some(selected => selected.id === item.id);
+    const existingItem = selectedItems.find(selected => selected.id === item.id);
     
-    if (isSelected) {
+    if (existingItem) {
       setSelectedItems(selectedItems.filter(selected => selected.id !== item.id));
     } else {
-      setSelectedItems([...selectedItems, item]);
+      setSelectedItems([...selectedItems, { ...item, quantity: 1 }]);
     }
+  };
+
+  const handleUpdateQuantity = (id, change) => {
+    setSelectedItems(selectedItems.map(item => {
+      if (item.id === id) {
+        const newQuantity = item.quantity + change;
+        return newQuantity > 0 ? { ...item, quantity: newQuantity } : item;
+      }
+      return item;
+    }).filter(item => item.quantity > 0));
   };
 
   const handleRemoveItem = (id) => {
     setSelectedItems(selectedItems.filter(item => item.id !== id));
   };
 
-  const total = selectedItems.reduce((sum, item) => sum + item.price, 0);
+  const total = selectedItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const totalItems = selectedItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <div style={{ 
@@ -260,7 +278,7 @@ const App = () => {
         backgroundAttachment: 'fixed',
         position: 'relative'
       }}>
-        {/* Overlay semi-transparente para mejorar legibilidad */}
+     
         <div style={{
           position: 'absolute',
           top: 0,
@@ -313,7 +331,9 @@ const App = () => {
             <SelectedItems
               selectedItems={selectedItems}
               onRemove={handleRemoveItem}
+              onUpdateQuantity={handleUpdateQuantity}
               total={total}
+              totalItems={totalItems}
             />
           )}
         </div>

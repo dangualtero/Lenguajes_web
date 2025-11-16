@@ -227,3 +227,30 @@
     margin-right: 420px;
   }
 }
+.quantity-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #CF948E;
+  background-color: white;
+  color: #CF948E;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.quantity-button:hover {
+  background-color: #CF948E;
+  color: white;
+}
+
+.quantity-text {
+  min-width: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}

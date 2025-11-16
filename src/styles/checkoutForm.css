@@ -1,0 +1,259 @@
+:root {
+  --bg-color: #fde6d5;
+  --accent-color: #d88c8c;
+  --text-color: #9b5f5f;
+  --white: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --border-light: #f3c2c2;
+}
+
+
+.checkout-form {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 15px var(--shadow);
+  width: 100%;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section-title {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--border-light);
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: "Baloo 2", sans-serif;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(216, 140, 140, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.payment-option {
+  cursor: pointer;
+}
+
+.payment-option input[type="radio"] {
+  display: none;
+}
+
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border: 2px solid var(--border-light);
+  border-radius: 1rem;
+  background-color: #fff5f0;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.payment-option input[type="radio"]:checked + .payment-card {
+  border-color: var(--accent-color);
+  background-color: #ffe6e6;
+  transform: scale(1.02);
+}
+
+.payment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.payment-icon {
+  font-size: 2rem;
+}
+
+.payment-text {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+
+.transfer-options {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #fff5f0;
+  border-radius: 1rem;
+  border: 2px solid var(--border-light);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transfer-label {
+  color: var(--text-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.transfer-methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.transfer-option {
+  cursor: pointer;
+}
+
+.transfer-option input[type="radio"] {
+  display: none;
+}
+
+.transfer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  border: 2px solid var(--border-light);
+  border-radius: 0.8rem;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.transfer-option input[type="radio"]:checked + .transfer-card {
+  border-color: var(--accent-color);
+  background-color: #ffe6e6;
+  transform: scale(1.05);
+}
+
+.transfer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px var(--shadow);
+}
+
+.transfer-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.transfer-logo span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo de Nequi */
+.nequi-logo {
+  background: #ffffff;
+  border: 2px solid #f3c2c2;
+  padding: 8px;
+}
+
+.nequi-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.bancolombia-logo {
+  background: #ffffff;
+  border: 2px solid #f3c2c2;
+  padding: 8px;
+}
+
+.bancolombia-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.transfer-name {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #d88c8c 0%, #c27070 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(216, 140, 140, 0.3);
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(216, 140, 140, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+
+

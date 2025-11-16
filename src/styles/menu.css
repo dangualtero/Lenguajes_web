@@ -1,4 +1,4 @@
-/* 🎨 Paleta base */
+
 :root {
   --bg-color: #fde6d5;
   --accent-color: #d88c8c;
@@ -7,7 +7,7 @@
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* 🌸 Fondo general y tipografía */
+
 body {
   background-color: var(--bg-color);
   font-family: "Baloo 2", sans-serif;
@@ -16,7 +16,7 @@ body {
   padding: 0;
 }
 
-/* Contenedor principal */
+
 .menu-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -25,7 +25,7 @@ body {
   transition: margin-right 0.4s ease-in-out;
 }
 
-/* Encabezado del menú */
+
 .menu-header {
   display: flex;
   justify-content: space-between;
@@ -44,7 +44,7 @@ body {
   color: #b07b7b;
 }
 
-/* Botón del carrito */
+
 .cart-btn {
   background-color: var(--accent-color);
   color: var(--white);
@@ -61,7 +61,7 @@ body {
   background-color: #c27070;
 }
 
-/* 🔍 Barra de búsqueda */
+
 .search-bar {
   width: 80%;
   max-width: 700px;
@@ -85,7 +85,7 @@ body {
   color: var(--text-color);
 }
 
-/* 🍴 Filtros */
+
 .category-filter {
   display: flex;
   justify-content: center;
@@ -112,14 +112,14 @@ body {
   transform: translateY(-2px);
 }
 
-/* 🧁 Grid del menú */
+
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
 }
 
-/* Tarjeta de producto */
+
 .menu-item {
   background-color: var(--white);
   border-radius: 1.5rem;
@@ -153,7 +153,7 @@ body {
   font-weight: 500;
 }
 
-/* Botón agregar */
+
 .add-btn {
   margin-top: 0.8rem;
   background-color: var(--accent-color);
@@ -169,7 +169,7 @@ body {
   background-color: #c27070;
 }
 
-/* 🛒 Panel del carrito */
+
 .cart-panel {
   position: fixed;
   top: 0;
@@ -229,7 +229,7 @@ body {
   background-color: #c27070;
 }
 
-/* 💫 Animaciones */
+
 .fade-in {
   animation: fadeIn 0.6s ease-in-out forwards;
 }
