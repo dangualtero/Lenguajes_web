@@ -1,0 +1,191 @@
+:root {
+  --bg-color: #fde6d5;
+  --accent-color: #d88c8c;
+  --text-color: #9b5f5f;
+  --white: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --border-light: #f3c2c2;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-section {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.info-title {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.info-text {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.info-text.schedule {
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.info-text.schedule:last-child {
+  border-bottom: none;
+}
+
+/* Botón principal (Cómo llegar) */
+.info-button {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #d88c8c 0%, #c27070 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(216, 140, 140, 0.3);
+  margin-top: 1rem;
+  font-family: "Baloo 2", sans-serif;
+}
+
+.info-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(216, 140, 140, 0.4);
+}
+
+.info-button:active {
+  transform: translateY(0);
+}
+
+/* Botones de contacto con iconos */
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.contact-icon-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #d88c8c 0%, #c27070 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(216, 140, 140, 0.3);
+  font-family: "Baloo 2", sans-serif;
+}
+
+.contact-icon-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(216, 140, 140, 0.4);
+}
+
+.contact-icon-button:active {
+  transform: translateY(0);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: var(--white);
+  padding: 8px;
+}
+
+/* Sección de redes sociales */
+.social-section {
+  background: linear-gradient(135deg, #ffe6e6 0%, #fff5f0 100%);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Botones de redes sociales con iconos */
+.social-icon-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(135deg, #d88c8c 0%, #c27070 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Baloo 2", sans-serif;
+  box-shadow: 0 3px 10px rgba(216, 140, 140, 0.3);
+  transition: all 0.3s ease;
+}
+
+.social-icon-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(216, 140, 140, 0.4);
+}
+
+.social-icon-button:active {
+  transform: translateY(0);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: var(--white);
+  padding: 6px;
+}
+
+/* Colores específicos para cada red social al hacer hover */
+.facebook-link:hover {
+  background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
+  box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
+}
+
+.instagram-link:hover {
+  background: linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%);
+  box-shadow: 0 5px 15px rgba(221, 42, 123, 0.4);
+}
+
+.whatsapp-link:hover {
+  background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+
+
+
+

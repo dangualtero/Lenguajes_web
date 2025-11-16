@@ -23,19 +23,19 @@ const CheckoutForm = ({ onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Si eligió transferencia, redirigir a la app correspondiente
+    
     if (formData.paymentMethod === 'transferencia') {
       if (formData.transferType === 'nequi') {
-        // Deep link para Nequi
+
         window.location.href = 'nequi://';
-        // Fallback a la Play Store si no tiene la app
+        
         setTimeout(() => {
 
         }, 1500);
       } else if (formData.transferType === 'bancolombia') {
-        // Deep link para Bancolombia
+
         window.location.href = 'bancolombia://';
-        // Fallback a la Play Store si no tiene la app
+     
         setTimeout(() => {
         
         }, 1500);
@@ -56,9 +56,9 @@ const CheckoutForm = ({ onSubmit }) => {
             type="text"
             name="name"
             className="form-input"
-            placeholder="Ej: Angeles Bonilla"
+            placeholder="Ej: Angel Ortiz"
             value={formData.name}
-            onChange={handleChange}
+            onChange={handleChange}s
             required
           />
         </div>
@@ -81,7 +81,7 @@ const CheckoutForm = ({ onSubmit }) => {
           <textarea
             name="address"
             className="form-textarea"
-            placeholder="Ej: Calle 10 #20-30"
+            placeholder="Ej: Calle 10 #20-30 barrio x"
             value={formData.address}
             onChange={handleChange}
             rows="3"
@@ -121,7 +121,7 @@ const CheckoutForm = ({ onSubmit }) => {
           </label>
         </div>
 
-        {/* Opciones de transferencia */}
+
         {formData.paymentMethod === 'transferencia' && (
           <div className="transfer-options">
             <p className="transfer-label">Selecciona tu método de transferencia:</p>

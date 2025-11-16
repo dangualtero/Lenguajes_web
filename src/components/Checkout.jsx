@@ -21,7 +21,7 @@ const Checkout = () => {
   }
 
   const handleSubmitOrder = (formData) => {
-    // Generar número de pedido
+   
     const orderNum = `LUME-${Math.floor(100000 + Math.random() * 900000)}`;
     setOrderNumber(orderNum);
     setShowSuccess(true);
